@@ -6,7 +6,7 @@ You have a list of named pieces of work and you want to run them in parallel. So
 
 # Tree structure of dependencies of what depends on what - maximum parallelisation
 
-Imagine you have a data structue more like this:
+Imagine you have a data structure like this. You can execute this tree in parallel, see treeworkers-incremental.py
 
 ```
 work =   [{
