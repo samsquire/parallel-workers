@@ -1,6 +1,6 @@
 # parallel-workers
 
-How do you execute a work graph in parallel.
+This repository has methods of executing work graphs. A work graph is a directed acyclic graph of tasks that have a topological ordering. There are dependencies between pieces of work that is captured by the relationship of connections.
 
 You have a list of named pieces of work and you want to run them in parallel. Some of them have ordering dependencies.
 
