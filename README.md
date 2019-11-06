@@ -10,6 +10,10 @@ Runs tree in parallel
 
 Runs tree in parallel
 
+# treeworkers.rb
+
+Runs tree in parallel
+
 You have a list of named pieces of work and you want to run them in parallel. Some of them have ordering dependencies.
 
 # Tree structure of dependencies of what depends on what - maximum parallelisation
