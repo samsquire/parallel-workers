@@ -22,7 +22,7 @@ public class Worker extends Thread {
 			}
 		}
 
-		System.out.println(String.format("Running %s", component.name));		
+		System.out.println(String.format("<- %s", component.name));		
 		try {
 		    Thread.sleep(5000);
 		} catch (InterruptedException ie) {
@@ -30,6 +30,6 @@ public class Worker extends Thread {
 		}
 
 
-		System.out.println(String.format("Finished %s", component.name));
+		System.out.println(String.format("-> %s", component.name));
 	}	
 }

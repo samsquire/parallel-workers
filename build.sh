@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 javac -cp ${CLASSPATH} src/main/java/code/*.java 
-java -cp ${CLASSPATH} code.TreeWorkers
+java -cp "${CLASSPATH};src/main/java" code.TreeWorkers
 
 
