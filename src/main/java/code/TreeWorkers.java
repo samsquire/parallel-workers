@@ -36,7 +36,6 @@ public class TreeWorkers {
 			for (Component component : components) {
 				Worker worker = new Worker(component, workers);
 				workers.put(component.name, worker);
-				System.out.println(String.format("-> %s", component.name));
 			}
 
 			for (Component component : components) {

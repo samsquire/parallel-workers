@@ -1,5 +1,5 @@
 require 'json'
-
+STDOUT.sync = true
 components = JSON.parse(File.read("data.json"))
 
 threads = Hash.new
@@ -12,8 +12,10 @@ components.each { |component|
 			threads[ancestor].join()
 		}	
 		puts("<- #{component["name"]}")
+		
 		sleep(5)
 		puts("-> #{component["name"]}")
+		
 	}
 }
 
