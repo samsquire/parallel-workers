@@ -72,11 +72,10 @@ work = [
 function createWorker(item, promises, timeout) {
 	return async function(resolve, reject) {
 			for (var k = 0 ; k < item.ancestors.length; k++) {
-				console.log("Waiting for parent...", item.ancestors[k]);
 				await promises[item.ancestors[k]];
 			}
-			console.log("Running", item.name);
-			setTimeout(function() { console.log("Finished", item.name); resolve(1); }, timeout);
+			console.log("<-", item.name);
+			setTimeout(function() { console.log("->", item.name); resolve(1); }, timeout);
 		}
 }
 
