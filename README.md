@@ -71,7 +71,9 @@ work =   [{
 ]
 ```
 
-# List of threads with run groups - things in the group must finish before the next item can begin
+# runner.py
+
+List of threads with run groups - things in the group must finish before the next item can begin
 
 Each top level list in the list can be done in paralell to the other list
 The items in a sublist can be done in parallel.
