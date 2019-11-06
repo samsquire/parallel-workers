@@ -69,13 +69,22 @@ work = [
 
 ]
 
+const { spawn } = require('child_process');
+
 function createWorker(item, promises, timeout) {
 	return async function(resolve, reject) {
 			for (var k = 0 ; k < item.ancestors.length; k++) {
 				await promises[item.ancestors[k]];
 			}
 			console.log("<-", item.name);
-			setTimeout(function() { console.log("->", item.name); resolve(1); }, timeout);
+			
+			const work = spawn("sleep", ["5"]);
+			work.on('close', () => {
+				console.log("->", item.name);
+				resolve(1);
+			});
+			
+			
 		}
 }
 
