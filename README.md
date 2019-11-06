@@ -2,6 +2,14 @@
 
 This repository has methods of executing work graphs. A work graph is a directed acyclic graph of tasks that have a topological ordering. There are dependencies between pieces of work that is captured by the relationship of connections.
 
+# treeworkers.js
+
+Runs tree in parallel
+
+# treeworkers.py
+
+Runs tree in parallel
+
 You have a list of named pieces of work and you want to run them in parallel. Some of them have ordering dependencies.
 
 # Tree structure of dependencies of what depends on what - maximum parallelisation
