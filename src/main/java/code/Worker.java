@@ -1,7 +1,11 @@
 package code;
 import java.lang.Thread;
 import java.util.Map;
+import java.lang.Runtime;
+import java.io.File;
+import java.lang.Process;
 import java.lang.InterruptedException;
+import java.io.IOException;
 
 public class Worker extends Thread {
 	Component component;
@@ -23,12 +27,20 @@ public class Worker extends Thread {
 		}
 
 		System.out.println(String.format("<- %s", component.name));		
+		ProcessBuilder pb = new ProcessBuilder("sleep", "5");
+		Map<String, String> env = pb.environment();
+		env.put("VAR1", "myValue");
+		env.remove("OTHERVAR");
+		env.put("VAR2", env.get("VAR1") + "suffix");
+		
 		try {
-		    Thread.sleep(5000);
+			Process p = pb.start();
+			p.waitFor();
+		} catch (IOException io) {
+			System.err.println(io.getMessage());
 		} catch (InterruptedException ie) {
-			System.out.println("Worker interrupted");
+			System.err.println(ie.getMessage());
 		}
-
 
 		System.out.println(String.format("-> %s", component.name));
 	}	
