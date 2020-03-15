@@ -16,6 +16,10 @@ Runs tree in parallel
 
 You have a list of named pieces of work and you want to run them in parallel. Some of them have ordering dependencies.
 
+# TreeWorkers.java
+
+Runs data.json
+
 # Tree structure of dependencies of what depends on what - maximum parallelisation
 
 Imagine you have a tree graph data structure like this. You can execute this tree in parallel, see treeworkers-incremental.py and treeworkers.py.
