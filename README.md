@@ -2,6 +2,8 @@
 
 This repository has methods of executing work graphs. A work graph is a directed acyclic graph of tasks that have a topological ordering. There are dependencies between pieces of work that is captured by the relationship of connections.
 
+See [devops-schedule](https://github.com/samsquire/devops-schedule) for schedulers for this code.
+
 # treeworkers.js
 
 Runs tree in parallel
